@@ -5,3 +5,5 @@ Spring Data JPA
 Thymeleaf
 SpringSecurity
 MySql
+
+run on:localhost:8282
