@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="d_base::(layout)(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body>
+<section>
+
+
+
+
+
+
+
+<div class="card">
+<div class="card-body">
+
+<h1 class="text-center">Show Expenses</h1>
+
+
+
+<div class="container mt-3">
+<div class="row">
+<div class="col-md-12">
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Expense</th>
+      <th scope="col">Description</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Actions</th>
+      <th scope="col">Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr th:each="c:${expenses}">
+  <th scope="row" th:text="${c.eID}" >1</th>
+  <td th:text="${c.name}">Mark</td>
+  <td th:text="${c.description}">Otto</td>
+  <td th:text="${c.price}">89</td>
+  <td>
+
+  <td><a class="btn btn-danger btn-sm" th:href="@{'/user/delete/'+${c.eID}}"> DELETE</i></td>
+  </td>
+  <td>
+      <button class="btn btn-sm btn-primary">Update </button></td>
+  
+  
+  
+  </tr>
+   
+  </tbody>
+</table>
+<div class="container text-center">
+
+
+
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+</body>
+</html>
+
+
+
